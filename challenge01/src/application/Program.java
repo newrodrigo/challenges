@@ -17,7 +17,7 @@ public class Program {
 
 		int n = sc.nextInt();
 
-		if (n >=1 && n <= 105) {
+		if (n > 1 && n <= 105) {
 			for (int i = 1; i <= n; i++) {
 				int number = sc.nextInt();
 
@@ -39,7 +39,7 @@ public class Program {
 				System.out.println(odd);
 			}
 		} else {
-			System.out.println("Erro: N precisa ser positivo e menor que 105");
+			System.out.println("Erro: O valor de N deve ser um número inteiro positivo maior que 1 e menor ou igual a 105.");
 		}
 		sc.close();
 	}
