@@ -17,29 +17,24 @@ public class Program {
 
 		int n = sc.nextInt();
 
-		if (n > 1 && n <= 105) {
-			for (int i = 1; i <= n; i++) {
-				int number = sc.nextInt();
+		for (int i = 1; i <= n; i++) {
+			int number = sc.nextInt();
 
-				if (number % 2 == 0) {
-					pairs.add(number);
-				} else {
-					odds.add(number);
-				}
+			if (number % 2 == 0) {
+				pairs.add(number);
+			} else {
+				odds.add(number);
 			}
+		}
 
-			Collections.sort(pairs);
-			Collections.sort(odds, Comparator.reverseOrder());
+		Collections.sort(pairs);
+		Collections.sort(odds, Comparator.reverseOrder());
 
-			System.out.println();
-			for (int pair : pairs) {
-				System.out.println(pair);
-			}
-			for (int odd : odds) {
-				System.out.println(odd);
-			}
-		} else {
-			System.out.println("Erro: O valor de N deve ser um número inteiro positivo maior que 1 e menor ou igual a 105.");
+		for (int pair : pairs) {
+			System.out.println(pair);
+		}
+		for (int odd : odds) {
+			System.out.println(odd);
 		}
 		sc.close();
 	}
